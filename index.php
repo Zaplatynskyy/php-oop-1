@@ -24,3 +24,43 @@ $movies[2]->setGenre('Drammatico');
 $movies[2]->setReleaseDate('1994');
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+</head>
+<body>
+    <h1>Movies</h1>
+    
+        <?php foreach($movies as $movie){ ?>
+            <h2><?php echo $movie->getTitle(); ?></h2>
+            
+            <ul>
+                <li>
+                    <strong>Durata :</strong>
+                    <?php echo $movie->getDuration(); ?> min
+                </li>
+
+                <li>
+                    <strong>Lingua originale :</strong>
+                    <?php echo $movie->getLanguage(); ?>
+                </li>
+
+                <li>
+                    <strong>Genere :</strong>
+                    <?php echo $movie->getGenre(); ?> 
+                </li>
+
+                <li>
+                    <strong>Anno di uscita :</strong>
+                    <?php echo $movie->getReleaseDate(); ?> 
+                </li>
+            </ul>
+        <?php } ?>
+    
+</body>
+</html>
