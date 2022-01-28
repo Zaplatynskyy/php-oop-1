@@ -14,7 +14,7 @@ class Movie {
     public $title;
     public $duration;
     public $language;
-    public $overwiev;
+    public $genre;
     public $release_date;
 
 
@@ -50,13 +50,13 @@ class Movie {
         return $this->language;
     }
 
-    public function setOverwiev($_overwiev)
+    public function setGenre($_genre)
     {
-        $this->overwiev = $_overwiev;
+        $this->genre = $_genre;
     }
-    public function getOverwiev()
+    public function getGenre()
     {
-        return $this->overwiev;
+        return $this->genre;
     }
 
     public function setReleaseDate($_release_date)
